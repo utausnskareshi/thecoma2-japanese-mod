@@ -1,0 +1,8 @@
+# 改行コードの扱いをリポジトリで固定する。
+# テキストファイルはリポジトリ内では LF で保存し、取り出すとき（clone・checkout）は、
+# どの OS・どの git の設定（core.autocrlf）でも CRLF にそろえる。
+# - このツールは Windows 専用で、build\publish.ps1 は Windows PowerShell 5.1 で動かすため。
+# - exe に埋め込まれる app.manifest などの改行が取り出した環境ごとに変わると、
+#   同じコミットからビルドしても exe の中身が変わってしまうため、それを防ぐ。
+# バイナリのファイル（画像など）は git が自動で判別し、変換しない。
+* text=auto eol=crlf

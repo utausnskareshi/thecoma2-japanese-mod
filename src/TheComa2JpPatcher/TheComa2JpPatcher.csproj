@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    画面（WinForms）と、Windows 固有の入出力（レジストリなど）を受け持つ実行ファイル。
+    判断ロジックはコアライブラリ側にあり、ここは結果の表示と操作の受け付けだけを行う。
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>TheComa2JpPatcher</RootNamespace>
+    <AssemblyName>TheComa2JpPatcher</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- 高DPIの画面でもぼやけないよう、モニターごとの拡大率に追従する。 -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+    <ApplicationUseCompatibleTextRendering>false</ApplicationUseCompatibleTextRendering>
+    <!-- WinForms 標準メッセージの各国語版のうち、日本語だけを含める（他の言語のリソースを省いて配布物を小さく保つため）。 -->
+    <SatelliteResourceLanguages>ja</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheComa2JpPatcher.Core\TheComa2JpPatcher.Core.csproj" />
+  </ItemGroup>
+
+</Project>

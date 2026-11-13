@@ -1,0 +1,29 @@
+# ビルド生成物
+bin/
+obj/
+artifacts/
+dist/
+TestResults/
+
+# IDE・ユーザー固有ファイル
+.vs/
+.idea/
+*.user
+*.suo
+
+# ゲームのファイル・解析結果は絶対にリポジトリへ入れない
+# （原資産や逆コンパイルしたコードの再配布を防ぐための安全網）
+# level0 以外の番号のシーンや、「level0.bak」「level0 - コピー」のような別名のコピーも含める。
+level[0-9]*
+# 拡張子の無い管理ファイル（globalgamemanagers）や、アセットバンドル・ゲームのプログラム。
+globalgamemanagers*
+*.unity3d
+*.bundle
+Assembly-CSharp*.dll
+*.assets
+*.resS
+*.resource
+*.db
+*.jppatch.tmp
+TheComa2JpPatcher_Backup/
+decomp/

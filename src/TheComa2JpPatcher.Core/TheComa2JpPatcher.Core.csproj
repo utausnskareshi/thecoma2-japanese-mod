@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    コアライブラリ。Steam の検出・Unity アセットの解析・パッチ計画といった
+    「画面に依存しない処理」をまとめる。外部パッケージには依存しない。
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>TheComa2JpPatcher.Core</RootNamespace>
+  </PropertyGroup>
+
+</Project>
